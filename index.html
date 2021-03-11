@@ -9,5 +9,46 @@
 </head>
 <body>
     <h1>BEST PROJECT! YES</h1>
+    <div>bla bla bla</div>
+    <button class="test">Go to profile</button>
 </body>
 </html>
+
+
+
+
+<style>
+    body {
+      color: #379278;
+    }
+
+    .test {
+      padding: 18px 26px;
+      margin-top: 20px;
+      outline: none;
+      background: #FFA0D9;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 35px;
+      transition: 0.2s;
+
+      width: 100%;
+      height: 540px;
+    }
+
+    .test:hover {
+      background: #f13aa8;
+    }
+</style>
+
+<script>
+    var button = document.querySelector('.test');
+    console.log(button);
+
+    button.addEventListener('click', function (e) {
+      button.style.color = 'red';
+    });
+</script>

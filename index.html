@@ -65,21 +65,29 @@
     <ins> <mark> Паша натурал </mark> </ins> <br>
     <p> Лучшие герои Dota 2 </p>
     <table  border="1">
-
+        <caption> Лучшая игра на свете </caption>
         <tr>
-            <th> Сила </th>
-            <td> Шейкер </td>
-            <td> Баратурм </td>
-            <td> Алхимик </td>
-            <td> Абадон </td>
+            <th class="row-1"; rowspan="2"> Сила </th>
+            <td rowspan="2"> Шейкер </td>
+            <td rowspan="2"> Баратурм </td>
+            <td rowspan="2"> Алхимик </td>
+            <td rowspan="1"> Абадон </td>
+        </tr>
+
+         <td>
+        </td>
+        <tr>
         </tr>
         <tr>
+
+            <th> Ловкость </th>
             <td> Тракса </td>
             <td> Спектра </td>
             <td> Венга </td>
             <td> Медуза </td>
         </tr>
         <tr>
+            <th> Интеллект </th>
             <td> мяу </td>
         </tr>
     </table>
@@ -93,18 +101,32 @@
     body {
       color: #379278;
     }
+
     td {
         border-top: 2px solid purple;
         border-bottom: 2px solid green;
         border-right: 2px solid green;
         border-left: 2px solid red;
         padding: 10px;
+        vertical-align: 1px;
+        text-align: right;
+        background-color: aqua;
+    }
+
+    .row-1 {
+        background-color: chartreuse;
     }
 
     table {
         border: 1px solid blue;
-       /* border-collapse: collapse; */     /* collapse - убирает двойные рамки */
+        /* border-collapse: collapse; */ /* collapse - убирает двойные рамки */
         border-spacing: 5px;
+        width: 300px;
+        height: 300px;
+    }
+
+    caption {
+    caption-side: bottom;
     }
 
     blockquote {

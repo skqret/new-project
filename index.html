@@ -8,8 +8,22 @@
     <title>Мама я верстальщик</title>
 </head>
 <body>
+    <header>
+        <div class="header-bg">
+            <img src="artefact_Matrioshka.png" alt="Матрёшки">
+        </div>
+    </header>
+
+
     <h1>BEST PROJECT! YES</h1>
     <div>bla bla bla</div>
+
+    <nav>
+        <a href="#Почему Паша лучший"> Почему Паша лучший </a> |
+        <a href="#Герои Dota 2"> Лучшие герои Dota 2 </a> |
+
+    </nav>
+
     <button class="test">Go to profile</button>
     <h2> Потренировался </h2>
         <p> Пора двигаться дальше </p>
@@ -22,7 +36,7 @@
         <img src="pasha.jpg" alt="Это Паша">
         <hr> бла бла
         <br> бла бла
-    <h3>Почему Паша лучший?</h3>
+    <h3 id="Почему Паша лучший"> Почему Паша лучший? </h3>
         <ui>
             <li>1
                 <ui>
@@ -63,7 +77,7 @@
     x<sup>2</sup>+y<sup>2</sup>=c<sup>2</sup> <br>
     <del> Паша гей </del> <br>
     <ins> <mark> Паша натурал </mark> </ins> <br>
-    <p> Лучшие герои Dota 2 </p>
+    <p id="Герои Dota 2"> Лучшие герои Dota 2 </p>
     <table  border="1">
         <caption> Лучшая игра на свете </caption>
         <tr>
@@ -91,6 +105,11 @@
             <td> мяу </td>
         </tr>
     </table>
+    <footer>
+        <img width="100" src="Павлик.jpg">
+        <span class="copyright"> 2020-2021  Павел Смирнов, вдохновляющиий на подвиги
+        </span>
+    </footer>
 </body>
 </html>
 
@@ -101,7 +120,10 @@
     body {
       color: #379278;
     }
-
+    footer {
+        background: white;
+        width: 100%;
+    }
     td {
         border-top: 2px solid purple;
         border-bottom: 2px solid green;
@@ -157,6 +179,10 @@
     }
     h2 {
         font-size: 32px;
+    }
+    header {
+        background:url("large.png") ;
+        height: 310px;
     }
 </style>
 

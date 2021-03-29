@@ -31,7 +31,7 @@
     <h1> Типы тегов </h1>
         <p> Хочу быть как <a href="https://vk.com/id42468412?z=photo42468412_456239343%2Falbum42468412_0%2Frev"> Паша </a> </p>
         <p> Хочу быть как <em>Паша</em> </p>
-        <p> Хочу быть как <strong> Паша </strong> </p>
+        <p class="truth"> Хочу быть как <strong> Паша </strong> </p>
     <a href="#Формула"> Формула серной кислоты </a>
     <a title="Нажми чтобы посмотреть на неё" href="https://yandex.ru/images/search?pos=0&img_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F34z06AN4wrk%2Fmaxresdefault.jpg&text=%D1%81%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B8%D1%81%D0%BB%D0%BE%D1%82%D0%B0&lr=16&rpt=simage&source=wiz"> (как выглядит баночка с серной кислотой) </a> <br>
         <img src="pasha.jpg" alt="Это Паша">
@@ -44,16 +44,15 @@
         <hr> бла бла
         <br> бла бла
     <h3 id="Почему Паша лучший"> Почему Паша лучший? </h3>
-        <ui>
-            <li>1
+        <ui class="menu">
+            <li> Признаки топовости
                 <ui>
                     <li>Он лучший программист (из моих друзей)</li>
                     <li>Он лучший омник Казахстана</li>
                     <li>Он лучший машнатор в любой настольной игре</li>
                 </ui>
             </li>
-            <li>2</li>
-        </ui>
+
         <d1>
             <dt> Паша </dt>
             <dd> Верстальщик </dd>
@@ -143,16 +142,29 @@
         Все такие изменения просчитаны заранее
 
     </p>
-
+    <label for="favorite hero">favorite hero</label>
     <p class="p-third">
         Если остались вопросы или есть замечания по работе Не Школы - я всегда на связи, пишите в ЛС.
         Если остались вопросы или есть замечания по работе Не Школы - я всегда на связи, пишите в ЛС.
     </p>
+    <label>
+   <form action="nyancat76@yandex.ru" method="get">
+      Nickname <input type="text" name="Nickname">
+   </form>
+    </label>
 
-    <p class="p-absolute">
-        Есть вещи, недопустимые в нашей компании - и с ними мы мериться никогда не будем,
-        как и выносить их на публику.
-    </p>
+    <label>
+        <form action="nyancat76@yandex.ru" method="get">
+            MMR <input type="text" name="MMR">
+        </form>
+    </label>
+
+    <form action="nyancat76@yandex.ru" method="get">
+         <input id="favorite hero" type="text" name="favorite hero">
+    </form>
+   <br>
+   
+
 
     <footer>
         <img width="100" src="Павлик.jpg">
@@ -173,9 +185,15 @@
         font-style: normal;
       }
 
+
+
       h1 {
         font-family: 'Beer money';
         font-weight: 400;
+      }
+
+      h2 {
+          text-transform: uppercase ;
       }
 
     body {
@@ -273,6 +291,29 @@
     .p-absolute {
         position: absolute; left: 100px; bottom: 300px;
     }
+
+    .left-column {
+        float: left;
+    }
+
+    .right-column {
+        float: right;
+    }
+
+    .footer {
+        clear: both;
+    }
+
+    p {
+        padding: 10px;
+    }
+
+    .truth {
+        background-color: #dff0d8;
+    }
+      li:hover ui {
+          display: block; /* При выделении пункта курсором мыши отображается подменю */
+      }
 
 </style>
 <!--

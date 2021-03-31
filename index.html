@@ -152,9 +152,12 @@
     <textarea name="Comment" cols="80px" rows="10px"> </textarea>
     <label>
    <form action="nyancat76@yandex.ru" method="get">
-       <label>  Nickname <input type="text" name="Nickname" value="Имя">  </label>
-       <label>  Password <input type="password" name="password">  </label>
+       <label>  Nickname <input type="text" name="Nickname" value="Имя" required>  </label>
+       <label>  Password <input type="password" name="password" required>  </label>
+       <label>  <input type="date" name="kalendarik" required>  </label>
+       <label>  <input type="time" name="времечко" required>  </label>
        <label>  I'm gay <input type="checkbox" checked>  </label>
+       <label>  Дни <input type="range" min="1" max="5">  </label>
 
        <p> <input type="reset"> <input type="submit" value="Отправить ответ"> </p>
    </form>
@@ -162,12 +165,21 @@
         <form action="nyancat76@yandex.ru" method="get">
         <label>  да гей <input type="radio" name="проверка на гея" value="да гей">  </label>
         <label>  можно подумать? <input type="radio" name="проверка на гея" value="можно подумать?">  </label>
+        <label> нажми на меня <input type="button" value="Кнопка"> </label>
+        <label> <input type="text" list="gays" autofocus> </label>
+            <datalist id="gays">
+                <option value="yes,I'm gay"> </option>
+                <option value="No,I'm gay"> </option>
+            </datalist>
+        <label>  <input type="image" src=pasha.jpg" alt="Маленький Паша"> </label>
+        <label> Поиск <input type="search" > </label>
+
         </form>
         <br>
         <form enctype="multipart/form-data">
             <label> Загрузи свою гейскую фотку <input type="file"> </label>
         </form>
-<br>
+   <br>
         <form>
             <select name="theme">
                 <option value="light"> Светлая тема </option>

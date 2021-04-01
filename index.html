@@ -152,12 +152,29 @@
     <textarea name="Comment" cols="80px" rows="10px"> </textarea>
 
    <form action="nyancat76@yandex.ru" method="get">
+
+       <fieldset>
+           <legend> Обязательная инфа  </legend>
        <label>  Nickname <input type="text" name="Nickname" value="Имя" required>  </label>
        <label>  Password <input type="password" name="password" required>  </label>
+       <label>  Pasport <input type="text" name="pasport" required pattern="7816-123456">  </label>
+       </fieldset>
+       <br>
+       <label>  <input type="tel" name="tel" placeholder="телефон свой укажи сука"> </label>
        <label>  <input type="date" name="kalendarik" required>  </label>
        <label>  <input type="time" name="времечко" required>  </label>
        <label>  I'm gay <input type="checkbox" checked>  </label>
        <label>  Дни <input type="range" min="1" max="5">  </label>
+       <label>  Выбери свой любимый цвет гомик <input type="color">  </label>
+       <br>
+       <select name="variants">
+           <optgroup label="Гейские варианты">
+                     <option value="1"> Вариант 1 </option>
+                     <option value="2"> Вариант 2 </option>
+                     <option value="3"> Вариант 3 </option>
+           </optgroup>
+       </select>
+       
 
        <p> <input type="reset"> <input type="submit" value="Отправить ответ"> </p>
    </form>
@@ -173,6 +190,13 @@
             </datalist>
         <label>  <input type="image" src=pasha.jpg" alt="Маленький Паша"> </label>
         <label> Поиск <input type="search" > </label>
+
+            <br>
+            <svg>
+                <circle r="50" cx="50%" cy="50%" fill="yellowgreen" />
+                <rect width="70" height="50" rx="10" ry="10" fill="purple"/>
+            </svg>
+            <br>
 
         </form>
         <br>

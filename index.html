@@ -18,7 +18,7 @@
 
     <h1>BEST PROJECT! YES</h1>
     <div>bla bla bla</div>
-
+    
     <nav>
         <a href="#Почему Паша лучший"> Почему Паша лучший </a> |
         <a href="#Герои Dota 2"> Лучшие герои Dota 2 </a> |
@@ -147,7 +147,12 @@
         Если остались вопросы или есть замечания по работе Не Школы - я всегда на связи, пишите в ЛС.
         Если остались вопросы или есть замечания по работе Не Школы - я всегда на связи, пишите в ЛС.
     </p>
-
+    <article>
+    <p> Мы чувствуем сложившуюся ситуацию и заботимся о Вас, поэтому теперь купить автомобиль в РОЛЬФ можно без визита в дилерский центр.
+        Просто выберите новый BMW, оставьте заявку на звонок, и мы свяжемся с Вами в ближайшее время.
+        При необходимости наш Эксперт BMW пришлет Вам видеообзор по интересующей модели.
+    </p>
+    </article>
 
     <textarea name="Comment" cols="80px" rows="10px"> </textarea>
 
@@ -211,6 +216,14 @@
             </select>
         </form>
 <br>
+    <div class="container">
+        <div class="column1">Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон. Когда значение свойства float равно none, элемент выводится на странице как обычно, при этом допускается, что одна строка обтекающего текста может быть на той же линии, что и сам элемент. </div>
+        <div class="column2">В браузере Internet Explorer 6 наблюдается ошибка с удвоением значения левого или правого отступа для плавающих элементов, вложенных в родительские элементы. Удваивается тот отступ, который прилегает к стороне родителя. Проблема обычно решается добавлением display: inline для плавающего элемента. Также в этом браузере добавляется отступ 3px (так называемый «трехпиксельный баг») в направлении, заданном значением float.</div>
+        <div class="column3">Здравствуйте! Применила к тексту float:right. Он выровнялся по правому краю, а картинка осталась слева. Возможно ли сделать так, чтобы картинка "прилепилась" к тексту?</div>
+        <div class="column4">Пару лет назад, когда разработчики впервые начали переходить к HTML-разметке без таблиц, CSS свойство float внезапно взяло на себя очень важную роль. Причина того, что свойство float стало так распространено, состояла в том, что по умолчанию, блочные элементы не выстраивались в линию рядом друг с другом в формате на основе столбца</div>
+        <div class="column5">Свойство float в CSS, позволяет разработчику включать подобные таблице столбцы в разметку HTML без использования таблиц. Если бы не свойство float, то схемы размещения CSS не были бы возможны, кроме использования абсолютного и относительного позиционирования — которые были бы неаккуратными и сделали бы схему разметки неудобной в сопровождении.</div>
+    </div>
+    <br>
     <div class="btn"> Какой фронтенд, иди лучше в Dota поиграй </div>
     <footer>
         <img width="100" src="Павлик.jpg">
@@ -226,13 +239,50 @@
 <style>
       @font-face {
         font-family: 'Beer money';
-        src: local('beer money'), local('beermoney'), url('http://hb.bizmrg.com/fonts/beermoney/400.woff2') format('woff2'), url('http://hb.bizmrg.com/fonts/beermoney/400.woff') format('woff');
+        src:
+                local('beer money'),
+                local('beermoney'),
+                url('http://hb.bizmrg.com/fonts/beermoney/400.woff2') format('woff2'),
+                url('http://hb.bizmrg.com/fonts/beermoney/400.woff') format('woff');
         font-weight: 400;
         font-style: normal;
       }
 
-
-
+      article {
+          column-count: 3;
+      }
+      .container {
+          width: 1200px;
+      }
+      .column1 {
+          float: none;
+          width: 1200px;
+          min-height: 50px;
+          background-color: yellow;
+      }
+      .column2 {
+          float: left;
+          width: 400px;
+          min-height: 50px;
+          background-color: red;
+      }
+      .column3 {
+          margin: 0px auto;
+          width: 400px;
+          min-height: 50px;
+          background-color: deepskyblue;
+      }
+      .column4 {
+          float: right;
+          width: 400px;
+          min-height: 50px;
+          background-color: #FFA0D9;
+      }
+      .column5 {
+          width: 1200px;
+          min-height: 50px;
+          background-color: orange;
+      }
       h1 {
         font-family: 'Beer money';
         font-weight: 400;
@@ -352,7 +402,8 @@
     }
 
     p {
-        padding: 10px;
+        padding: 1px;
+        text-indent: 24px;
     }
 
     .truth {
@@ -367,6 +418,14 @@
             padding: 15px 20px;
             text-align: center;
             margin: 100px auto;
+    }
+
+    p::first-letter {color: red}
+    p:first-child::first-letter {
+        float: left;
+    }
+    p::first-line {
+        color: orange;
     }
 </style>
 <!--

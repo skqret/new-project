@@ -233,8 +233,17 @@
         <div class="item-4">Пару лет назад, когда разработчики впервые начали переходить к HTML-разметке без таблиц </div>
     </div>
     <br>
-    <div class="song"> А у меня во дворе, ходит девочка с карре </div>
+    <div class="block-shadow">
+        <div class="song"> А у меня во дворе, ходит девочка с карре </div>
+    </div>
         <br>
+    <ul class="main_menu">
+        <li> <a href="">О компании </a></li>
+        <li> <a href="">Услуги </a></li>
+        <li> <a href="">Сотрудники </a></li>
+        <li> <a href="">Контакты </a></li>
+    </ul>
+    <br>
     <div class="btn"> Какой фронтенд, иди лучше в Dota поиграй </div>
     <footer>
         <img width="100" src="Павлик.jpg">
@@ -257,6 +266,22 @@
                 url('http://hb.bizmrg.com/fonts/beermoney/400.woff') format('woff');
         font-weight: 400;
         font-style: normal;
+      }
+      .main_menu {
+          margin: 0;
+          padding: 0;
+          background: none;
+          list-style: none;
+          width: 180px;
+      }
+      .main_menu li {
+          margin-bottom: 8px;
+      }
+      .main_menu a{
+          color: purple;
+          display: block;
+          padding: 8px 14px;
+          border: 1px solid #e5e5e5;
       }
       .song {
           position: center;

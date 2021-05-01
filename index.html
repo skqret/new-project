@@ -297,6 +297,17 @@
             <label for="kingsacoden4">4</label>
         </div>
     </div>
+    <br>
+    <div class="kryshka_navigatsa">
+        <a href="/">Главная</a>
+        <a href="/">Раздел сайта</a>
+        <a href="/">Категория сайта</a>
+        <span>Крайний запрос</span>
+    </div>
+
+    <div class="map">
+        <div class="pin"></div>
+    <div/>
 
 
     </div>
@@ -324,7 +335,89 @@
         font-weight: 400;
         font-style: normal;
       }
-
+      .map {
+          position: relative;
+          width: 360px;
+          height: 360px;
+          margin: 30px auto;
+          box-shadow: 0 0 3px #ccc;
+          background: #fff url("map.jpg") no-repeat 50% 50%;
+          border: 20px solid white;
+      }
+      .kryshka_navigatsa * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0
+      }
+      .kryshka_navigatsa {
+          display: flex;
+          flex-wrap: wrap;
+          counter-reset: flag;
+          margin: 20px;
+      }
+      .kryshka_navigatsa a,
+      .kryshka_navigatsa span {
+          background: white;
+          color: black;
+          transition: all 0.5s;
+          text-decoration: none;
+          outline: none;
+          font-size: 12px;
+          line-height: 36px;
+          padding: 0 10px 0 60px;
+          position: relative;
+          font-size: 13px;
+          font-family: Verdana, sans-serif;
+          border: 2px solid #add6f7;
+          border-right: 0;
+          margin: 2px 0;
+          border-radius: 8px 0 0 8px;
+      }
+      .kryshka_navigatsa a:first-child {
+          padding-left: 46px;
+      }
+      .kryshka_navigatsa a:first-child:before {
+          left: 14px;
+      }
+      .kryshka_navigatsa a:hover{
+          background: #add6f7;
+      }
+      .kryshka_navigatsa a:hover:after {
+          background: #add6f7;
+      }
+      .kryshka_navigatsa a:after,
+      .kryshka_navigatsa span:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -18px;
+          width: 36px;
+          height: 36px;
+          transform: scale(0.7) rotate(45deg);
+          z-index: 1;
+          box-shadow: 2px -2px 0 2px #add6f7;
+          border-radius: 0 5px 0 50px;
+          background: white;
+          transition: all 0.5s;
+      }
+      .kryshka_navigatsa a:before,
+      .kryshka_navigatsa span:before {
+          content: counter(flag);
+          counter-increment: flag;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          font-size: 11px;
+          line-height: 20px;
+          margin: 8px 0;
+          position: absolute;
+          top: 0;
+          left: 30px;
+          font-weight: bold;
+          background: #f9f8f8;
+          box-shadow: 0 0 0 1px #c5c2c2;
+      }
       .kopadormason {
           position: relative;
           z-index:0;

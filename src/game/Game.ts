@@ -1,24 +1,24 @@
 import Player from "@/game/Player";
-
+import InputHandler from "@/game/InputHandler";
 export default class Game {
   canvas: HTMLCanvasElement;
   context: CanvasRenderingContext2D;
   player: Player;
   players: Player[];
+  keys: string[] = [];
+  input: InputHandler;
 
   constructor() {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    this.canvas = document.getElementById("gameCanvas");
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    this.context = this.canvas?.getContext("2d");
+    this.canvas = document.getElementById("gameCanvas") as HTMLCanvasElement;
+    this.context = this.canvas?.getContext("2d") as CanvasRenderingContext2D;
     this.player = new Player({
       game: this,
       x: 200,
       y: 100,
     });
     this.players = [this.player];
+    this.input = new InputHandler(this);
+    this.keys = [];
   }
 
   update() {

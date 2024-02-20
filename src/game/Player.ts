@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import Game from "@/game/Game";
 
 export interface IOptionsPlayer {
@@ -32,7 +30,7 @@ export default class Player {
   }
 
   update() {
-    console.log(1);
+    // console.log(1);
   }
 
   draw(context: CanvasRenderingContext2D) {

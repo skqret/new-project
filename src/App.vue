@@ -9,6 +9,7 @@
 <script setup>
 import { onMounted, onBeforeUnmount } from "vue";
 import Game from "@/game/Game.ts";
+import InputHandler from "@/game/InputHandler";
 import BeautifulButton from "@/components/BeautifulButton.vue";
 
 let interval;

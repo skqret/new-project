@@ -1,5 +1,6 @@
 import Player from "@/game/Player";
 import InputHandler from "@/game/InputHandler";
+
 export default class Game {
   canvas: HTMLCanvasElement;
   context: CanvasRenderingContext2D;
@@ -13,8 +14,8 @@ export default class Game {
     this.context = this.canvas?.getContext("2d") as CanvasRenderingContext2D;
     this.player = new Player({
       game: this,
-      x: 200,
-      y: 100,
+      x: 0,
+      y: 0,
     });
     this.players = [this.player];
     this.input = new InputHandler(this);
@@ -34,7 +35,7 @@ export default class Game {
       new Player({
         game: this,
         x: 300,
-        y: 150,
+        y: 0,
         color: "#101ad0",
       })
     );

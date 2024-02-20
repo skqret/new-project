@@ -1,5 +1,11 @@
 import Game from "@/game/Game";
 
+export interface IProjectileOptions {
+  game: Game;
+  x: number;
+  y: number;
+}
+
 export default class Projectile {
   game: Game;
   x: number;
@@ -9,7 +15,7 @@ export default class Projectile {
   speed: number;
   markedForDeletion: boolean;
 
-  constructor(game: Game, x: number, y: number) {
+  constructor({ game, x, y }: IProjectileOptions) {
     this.game = game;
     this.x = x;
     this.y = y;
@@ -21,11 +27,16 @@ export default class Projectile {
 
   update(): void {
     this.x += this.speed;
-    if (this.x > this.game.canvas.width * 0.8) this.markedForDeletion = true;
+    if (this.x > this.game.canvas.width) {
+      this.markedForDeletion = true;
+    }
   }
 
   draw(context: CanvasRenderingContext2D): void {
-    context.fillStyle = "yellow";
+    context.beginPath();
+    context.fillStyle = "red";
     context.fillRect(this.x, this.y, this.width, this.height);
+    context.fill();
+    context.closePath();
   }
 }

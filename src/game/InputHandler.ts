@@ -11,16 +11,20 @@ export default class InputHandler {
   init() {
     window.addEventListener("keydown", (e: KeyboardEvent) => {
       if (
-        (e.key === "ArrowUp" || e.key === "ArrowDown") &&
-        this.game.keys.indexOf(e.key) === -1
+        (e.code === "KeyD" ||
+          e.code === "KeyA" ||
+          e.code === "KeyS" ||
+          e.code === "KeyW" ||
+          e.code === "Space") &&
+        this.game.keys.indexOf(e.code) === -1
       ) {
-        this.game.keys.push(e.key);
+        this.game.keys.push(e.code);
         console.log(this.game.keys);
       }
     });
     window.addEventListener("keyup", (e: KeyboardEvent) => {
-      if (this.game.keys.indexOf(e.key) > -1) {
-        this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
+      if (this.game.keys.indexOf(e.code) > -1) {
+        this.game.keys.splice(this.game.keys.indexOf(e.code), 1);
       }
     });
   }

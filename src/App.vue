@@ -3,7 +3,7 @@
 
   <beautiful-button />
 
-  <canvas id="gameCanvas" width="480" height="320"></canvas>
+  <canvas id="gameCanvas" width="500" height="500"></canvas>
 </template>
 
 <script setup>

@@ -4,6 +4,8 @@ export interface IProjectileOptions {
   game: Game;
   x: number;
   y: number;
+  speedX: number;
+  speedY: number;
 }
 
 export default class Projectile {
@@ -12,22 +14,30 @@ export default class Projectile {
   y: number;
   width: number;
   height: number;
-  speed: number;
+  speedX: number;
+  speedY: number;
   markedForDeletion: boolean;
 
-  constructor({ game, x, y }: IProjectileOptions) {
+  constructor({ game, x, y, speedX, speedY }: IProjectileOptions) {
     this.game = game;
     this.x = x;
     this.y = y;
-    this.width = 10;
+    this.width = 3;
     this.height = 3;
-    this.speed = 3;
+    this.speedX = speedX;
+    this.speedY = speedY;
     this.markedForDeletion = false;
   }
 
   update(): void {
-    this.x += this.speed;
-    if (this.x > this.game.canvas.width) {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (
+      this.x < 0 ||
+      this.x > this.game.canvas.width ||
+      this.y < 0 ||
+      this.y > this.game.canvas.height
+    ) {
       this.markedForDeletion = true;
     }
   }
